@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -20,14 +18,16 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
-
 a:hover {
   color: #535bf2;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 h1 {
@@ -35,7 +35,7 @@ h1 {
   line-height: 1.1;
 }
 
-.default-btn {
+button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -46,14 +46,12 @@ h1 {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-
 button:hover {
   border-color: #646cff;
 }
-
 button:focus,
 button:focus-visible {
-  outline: none;
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
@@ -61,35 +59,10 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-
   a:hover {
     color: #747bff;
   }
-
-
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
+  button {
+    background-color: #f9f9f9;
   }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  display: inline-block;
-  min-width: 100%;
-  animation: marquee 28s linear infinite;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-* {
-  margin: 0%
 }
